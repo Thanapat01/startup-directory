@@ -1,6 +1,6 @@
 export default function login() {
     return (
-        <div className="flex justify-center mt-10">
+        <div className="flex justify-center pt-10">
             <div className="form-control w-full max-w-xs">
                 <label className="label">
                     <span className="label-text">ID</span>

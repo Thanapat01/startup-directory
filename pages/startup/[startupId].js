@@ -42,8 +42,8 @@ export default function StartupDetail(props) {
   let data = props.data;
 
   return (
-    <div className="text-neutral pt-16 px-32 text-l">
-      <div className="grid grid-cols-4 gap-4 bg-primary-content p-4">
+    <div className="text-neutral pt-16 text-l flex justify-center">
+      <div className="grid grid-cols-4 gap-8 bg-primary-content p-4 w-3/4">
         <div className="avatar row-span-2">
           <div className="w-32 rounded">
             <Image src={data.logo} layout="fill" objectFit="contain"></Image>
@@ -53,26 +53,28 @@ export default function StartupDetail(props) {
         <div className="text-end mr-16">
           {data.origin} {data.year}
         </div>
-        <div>
-          <div className="badge badge-primary">Industry</div>
-          <span className="ml-2">{data.industry}</span>
-        </div>
-        <div>
-          <div className="badge badge-primary">Stage</div>
-          <span className="ml-2">{data.stage}</span>
-        </div>
-        <div>
-          <div className="badge badge-primary">Website</div>
-          <span>
-            <a
-              className="ml-2"
-              href={data.website}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {data.website}
-            </a>
-          </span>
+        <div className="col-span-3 flex items-center justify-between mr-8">
+          <div className="flex items-center">
+            <div className="badge badge-primary">Industry</div>
+            <div className="ml-2">{data.industry}</div>
+          </div>
+          <div className="flex items-center">
+            <div className="badge badge-primary">Stage</div>
+            <div className="ml-2">{data.stage}</div>
+          </div>
+          <div className="flex items-center">
+            <div className="badge badge-primary">Website</div>
+            <div>
+              <a
+                className="ml-2"
+                href={data.website}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {data.website}
+              </a>
+            </div>
+          </div>
         </div>
         <div className="col-span-4 ml-16 mt-4 indent-8">{data.about}</div>
       </div>
