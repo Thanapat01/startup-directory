@@ -42,7 +42,7 @@ export default function StartupDetail(props) {
   let data = props.data;
 
   return (
-    <div className="text-neutral pt-16 text-l flex justify-center">
+    <div className="pt-16 text-l flex justify-center">
       <div className="grid grid-cols-4 gap-8 bg-primary-content p-4 w-3/4">
         <div className="avatar row-span-2">
           <div className="w-32 rounded">

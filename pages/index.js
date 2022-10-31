@@ -46,7 +46,7 @@ export default function Home(props) {
   // console.log(props.data)
 
   return (
-    <div className="text-neutral bg-base-100">
+    <div>
       <h1 className="pt-10 text-3xl text-center">Main Page</h1>
       <div className="mt-10">
         <Table data={data}></Table>
