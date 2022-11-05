@@ -66,7 +66,7 @@ export default function StartupDetail(props) {
             <div className="badge badge-primary">Website</div>
             <div>
               <a
-                className="ml-2"
+                className="ml-2 link link-hover"
                 href={data.website}
                 target="_blank"
                 rel="noopener noreferrer"

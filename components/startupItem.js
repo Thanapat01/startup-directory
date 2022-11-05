@@ -25,6 +25,7 @@ export default function StartupItem(props) {
                         </div>
                         <div>
                             <div className="font-bold">{data.name}</div>
+                            <div className="text-sm max-w-lg break-normal whitespace-normal">{data.about}</div>
                         </div>
                     </div>
                 </td>
