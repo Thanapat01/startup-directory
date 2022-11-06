@@ -19,7 +19,7 @@ export default function StartupItem(props) {
                 <td className="bg-base-200">
                     <div className="flex items-center space-x-3">
                         <div className="avatar">
-                            <div className="mask mask-squircle w-12 h-12">
+                            <div className="w-12 h-12 ring rounded">
                                 <Image src={data.logo} layout="fill" objectFit="contain"></Image>
                             </div>
                         </div>
