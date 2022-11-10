@@ -1,4 +1,5 @@
 import TableForum from "../../components/tableForum";
+import { useEffect } from "react";
 
 let data = [
   {
@@ -18,6 +19,13 @@ let data = [
 export default function Forum(props) {
   let data = props.data;
 
+  // useEffect(() => {
+  //   data.forEach((forum) => {
+  //     forum.time = getDateTime(forum.time);
+  //   });
+  //   console.log(data);
+  // }, []);
+
   return (
     <div className="pt-10">
       <TableForum data={data}></TableForum>
@@ -26,6 +34,11 @@ export default function Forum(props) {
 }
 
 export async function getServerSideProps(context) {
+  data.forEach((forum) => {
+    forum.datetime = getDateTime(forum.time);
+  });
+  // console.log(data);
+
   return {
     props: {
       data: data,
@@ -33,6 +46,23 @@ export async function getServerSideProps(context) {
   };
 }
 
+function getDateTime(time) {
+  // event.stopPropagation();
+  // const currentDate = new Date();
+  // let postDate = new Date(data.time);
+  // console.log(currentDate.getTime() - postDate.getTime());
+
+  // const currentDate = new Date();
+  // let postDate = new Date(data.time);
+  // return postDate;
+
+  const date = new Date(time);
+  const result = date.toLocaleString("en-UK", {
+    dateStyle: "long",
+    timeStyle: "short",
+  });
+  return result;
+}
 // <div className="overflow-x-auto w-full flex justify-center p-10 ">
 //   <table className="table w-3/4">
 //     <thead>

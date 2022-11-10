@@ -55,7 +55,7 @@ export default function ForumItem(props) {
                 Click
               </button> */}
               <div className="text-sm max-w-lg break-normal whitespace-normal ">
-                {getDateTime().toString()}
+                {data.datetime}
               </div>
             </div>
           </div>
