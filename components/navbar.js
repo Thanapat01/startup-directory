@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <div className="text-neutral navbar bg-primary-content">
+    <div className="text-black navbar bg-secondary">
       <div className="flex-1">
         <Link href="/">
           <a className="btn btn-ghost normal-case text-xl">Main</a>
