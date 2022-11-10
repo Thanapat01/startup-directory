@@ -8,7 +8,7 @@ export default function TableForum(props) {
       <table className="table w-3/4">
         <thead>
           <tr>
-            <th className="bg-primary text-white text-lg">Newest</th>
+            <th className="bg-primary text-neutral text-lg">Newest</th>
           </tr>
         </thead>
         {data.map((data) => {

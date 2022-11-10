@@ -15,7 +15,7 @@ export default function StartupItem(props) {
   return (
     <tbody key={data.id}>
       <tr>
-        <td className="bg-base-100 border-y-2">
+        <td className="bg-base-200 border-b-2 border-primary rounded-none">
           <div className="flex items-center space-x-3">
             <div className="avatar">
               <div className="w-12 h-12 ring rounded">
@@ -34,11 +34,15 @@ export default function StartupItem(props) {
             </div>
           </div>
         </td>
-        <td className="bg-base-100 border-y-2">{data.industry}</td>
-        <td className="bg-base-100 border-y-2">{data.stage}</td>
-        <th className="bg-base-100 border-y-2">
+        <td className="bg-base-200 border-b-2 border-primary rounded-none">
+          {data.industry}
+        </td>
+        <td className="bg-base-200 border-b-2 border-primary rounded-none">
+          {data.stage}
+        </td>
+        <th className="bg-base-200 border-b-2 border-primary rounded-none">
           <button
-            className="btn btn-primary btn-xs"
+            className="btn btn-primary btn-xs text-neutral"
             onClick={showDetailHandler}
           >
             details

@@ -55,7 +55,7 @@ export default function Home(props) {
               <input
                 type="text"
                 placeholder="Search…"
-                className="input input-bordered input-sm w-96"
+                className="input input-bordered input-sm w-96 focus:outline-none"
               />
               <button className="btn btn-square btn-sm btn-primary">
                 <svg
