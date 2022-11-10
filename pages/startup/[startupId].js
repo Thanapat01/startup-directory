@@ -43,14 +43,14 @@ export default function StartupDetail(props) {
 
   return (
     <div className="pt-16 text-l flex justify-center">
-      <div className="grid grid-cols-4 gap-8 bg-primary-content p-8 w-3/4">
+      <div className="grid grid-cols-4 gap-8 bg-primary-content p-8 w-3/4 rounded-md">
         <div className="avatar row-span-2 flex justify-center">
           <div className="w-48 rounded ring-4 relative">
             <Image src={data.logo} layout="fill" objectFit="contain"></Image>
           </div>
         </div>
         <div className="flex items-center">
-          <div className="badge badge-primary">name</div>
+          <div className="badge badge-primary">Name</div>
           <div className="ml-4">{data.name}</div>
         </div>
         <div className="flex items-center">

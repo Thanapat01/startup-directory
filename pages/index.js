@@ -57,7 +57,7 @@ export default function Home(props) {
                 placeholder="Search…"
                 className="input input-bordered input-sm w-96"
               />
-              <button className="btn btn-square btn-sm">
+              <button className="btn btn-square btn-sm btn-primary">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-6 w-6"

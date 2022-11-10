@@ -36,7 +36,7 @@ export default function ForumItem(props) {
   return (
     <tbody key={data.id}>
       <tr>
-        <td className="hover:bg-slate-200 bg-slate-100  cursor-pointer">
+        <td className="hover:bg-base-200 bg-base-100 cursor-pointer">
           <div
             className="flex items-center space-x-3 "
             onClick={showDetailHandler}
