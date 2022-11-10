@@ -20,14 +20,14 @@ export default function login() {
           placeholder="Password"
           className="input input-bordered w-full max-w-xs"
         />
-        <button className="btn btn-primary border-0 normal-case text-xl mt-4">
+        <button className="btn btn-primary border-0 normal-case text-xl text-neutral mt-4">
           Login
         </button>
         <div className="flex justify-end mt-2">
           <div className="mr-2">Not a member yet?</div>
 
           <Link href="/register">
-            <a className="link link-hover">Register</a>
+            <a className="link link-hover text-primary">Register</a>
           </Link>
         </div>
       </div>

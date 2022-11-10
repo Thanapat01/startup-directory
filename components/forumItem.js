@@ -36,16 +36,16 @@ export default function ForumItem(props) {
   return (
     <tbody key={data.id}>
       <tr>
-        <td className="hover:bg-base-200 bg-base-100 cursor-pointer">
+        <td className="hover:bg-base-200 bg-base-300 bg-opacity-90 cursor-pointer border-b-2 border-primary rounded-none">
           <div
             className="flex items-center space-x-3 "
             onClick={showDetailHandler}
           >
             <div>
-              <div className="flex items-end">
+              <div className="flex items-center">
                 <div className="font-bold">{data.name}</div>
                 <div
-                  className="text-sm ml-4 hover:bg-slate-300"
+                  className="badge badge-secondary text-sm ml-4 hover:bg-slate-300"
                   onClick={tagHandler}
                 >
                   {data.tag}

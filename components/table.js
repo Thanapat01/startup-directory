@@ -9,9 +9,9 @@ export default function Table(props) {
       <table className="table w-3/4 ">
         <thead>
           <tr>
-            <th className="bg-primary text-white ">Name</th>
-            <th className="bg-primary text-white ">Industry</th>
-            <th className="bg-primary text-white ">Stage</th>
+            <th className="bg-primary">Name</th>
+            <th className="bg-primary">Industry</th>
+            <th className="bg-primary">Stage</th>
             <th className="bg-primary"></th>
           </tr>
         </thead>
