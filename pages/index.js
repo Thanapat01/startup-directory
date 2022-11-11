@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
+import Chip from "../components/chip";
 import SearchBar from "../components/searchBar";
 import Table from "../components/table";
 import styles from "../styles/Home.module.css";
@@ -50,8 +51,11 @@ export default function Home(props) {
     <div>
       <h1 className="pt-10 text-3xl text-center">Main Page</h1>
       <div className="flex justify-center">
-        <div className="mt-10 flex justify-start w-3/4">
+        <div className="mt-10 flex justify-between items-center w-3/4">
           <SearchBar></SearchBar>
+          <Chip name="Manufacturing & Construction"></Chip>
+          <Chip name="Food & Agriculture"></Chip>
+          <Chip name="Hospitality & Tourism"></Chip>
         </div>
       </div>
       <div className="mt-4">
