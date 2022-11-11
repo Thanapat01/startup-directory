@@ -52,7 +52,13 @@ export default function Home(props) {
       <h1 className="pt-10 text-3xl text-center">Main Page</h1>
       <div className="flex justify-center">
         <div className="mt-10 flex justify-between items-center w-3/4">
-          <SearchBar></SearchBar>
+          <div>
+            <SearchBar></SearchBar>
+            <div className="flex justify-center mt-4 gap-4">
+              <button className="btn btn-sm btn-secondary">Voice</button>
+              <button className="btn btn-sm btn-secondary">Image</button>
+            </div>
+          </div>
           <Chip name="Manufacturing & Construction"></Chip>
           <Chip name="Food & Agriculture"></Chip>
           <Chip name="Hospitality & Tourism"></Chip>
