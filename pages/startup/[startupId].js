@@ -1,42 +1,5 @@
 import Image from "next/image";
-
-let data = [
-  {
-    id: 1,
-    name: "Dragomo",
-    about:
-      "We are a production studio that combines technologies such as 3D rendering, Interactive, Immersive, IOT, AI, Blockchian to lead our clients to a successful metavers project.",
-    industry: "Manufacturing & Construction",
-    year: "2015",
-    stage: "Seed",
-    origin: "Thailand",
-    website: "http://www.dragomo.com/",
-    logo: "https://drive.google.com/uc?id=1q3QYwevwkEk9sq9WTlf3VwjsUUvq8P5b",
-  },
-  {
-    id: 2,
-    name: "Dream Spoon's ice cream",
-    about: "The best 'guilt-free ice cream' with premium deliciousness",
-    industry: "Food & Agriculture",
-    year: "2020",
-    stage: "Transformed SME",
-    origin: "Thailand",
-    website: "https://dreamspoonsicecream.com/",
-    logo: "https://lh3.googleusercontent.com/u/0/d/1Qhht4i0sKwvxbjG1bifMveJU2fmbC1Cc=w1920-h969-iv1",
-  },
-  {
-    id: 3,
-    name: "DriveMate",
-    about:
-      "Drivemate, car rental between individuals and pros insured by LMG Switch your car with your passion",
-    industry: "Hospitality & Tourism",
-    year: "2017",
-    stage: "Funded",
-    origin: "Thailand",
-    website: "https://www.drivemate.asia/en",
-    logo: "https://lh3.googleusercontent.com/u/0/d/1prKoGWKstSvnQHG16dCyes36cR85OsZc=w1920-h969-iv1",
-  },
-];
+import { MongoClient, ObjectId } from "mongodb";
 
 export default function StartupDetail(props) {
   let data = props.data;
@@ -50,32 +13,46 @@ export default function StartupDetail(props) {
           </div>
         </div>
         <div className="flex items-center">
-          <div className="badge badge-primary text-neutral font-semibold">Name</div>
+          <div className="badge badge-primary text-neutral font-semibold">
+            Name
+          </div>
           <div className="ml-4">{data.name}</div>
         </div>
         <div className="flex items-center">
-          <div className="badge badge-primary text-neutral font-semibold">Industry</div>
+          <div className="badge badge-primary text-neutral font-semibold">
+            Industry
+          </div>
           <div className="ml-4">{data.industry}</div>
         </div>
         <div className="flex items-center">
-          <div className="badge badge-primary text-neutral font-semibold">Year</div>
+          <div className="badge badge-primary text-neutral font-semibold">
+            Year
+          </div>
           <div className="ml-4">{data.year}</div>
         </div>
         <div className="flex items-center">
-          <div className="badge badge-primary text-neutral font-semibold">Status</div>
+          <div className="badge badge-primary text-neutral font-semibold">
+            Status
+          </div>
           <div className="ml-4">{data.stage}</div>
         </div>
         <div className="col-span-2 flex items-center">
-          <div className="badge badge-primary text-neutral font-semibold">Origin</div>
+          <div className="badge badge-primary text-neutral font-semibold">
+            Origin
+          </div>
           <div className="ml-4">{data.origin}</div>
         </div>
 
         <div className="col-span-4 ml-16">
-          <div className="badge badge-primary text-neutral font-semibold">Description</div>
+          <div className="badge badge-primary text-neutral font-semibold">
+            Description
+          </div>
           <div className="ml-8 indent-8">{data.about}</div>
         </div>
         <div className="col-start-4 flex justify-end items-center">
-          <div className="badge badge-primary text-neutral font-semibold">Website</div>
+          <div className="badge badge-primary text-neutral font-semibold">
+            Website
+          </div>
           <div>
             <a
               className="ml-2 link link-hover"
@@ -95,11 +72,23 @@ export default function StartupDetail(props) {
 export async function getServerSideProps(context) {
   const startupId = context.params.startupId;
 
-  let selectedStartup = data.find((o) => o.id == startupId);
+  const client = new MongoClient(process.env.MONGODB_URI);
+  let data = [];
+
+  try {
+    const database = client.db("startup_directory");
+    const startup = database.collection("startup");
+
+    data = await startup.findOne({ _id: ObjectId(startupId) });
+  } catch (error) {
+    console.log(error);
+  } finally {
+    await client.close();
+  }
 
   return {
     props: {
-      data: selectedStartup,
+      data: JSON.parse(JSON.stringify(data)),
     },
   };
 }

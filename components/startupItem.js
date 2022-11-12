@@ -7,8 +7,8 @@ export default function StartupItem(props) {
   const router = useRouter();
 
   function showDetailHandler() {
-    if (typeof data.id != "undefined") {
-      router.push("/startup/" + data.id);
+    if (typeof data._id != "undefined") {
+      router.push("/startup/" + data._id);
     }
   }
 

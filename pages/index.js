@@ -5,44 +5,7 @@ import Modal from "../components/modal";
 import SearchBar from "../components/searchBar";
 import Table from "../components/table";
 import styles from "../styles/Home.module.css";
-
-let data = [
-  {
-    id: 1,
-    name: "Dragomo",
-    about:
-      "We are a production studio that combines technologies such as 3D rendering, Interactive, Immersive, IOT, AI, Blockchian to lead our clients to a successful metavers project.",
-    industry: "Manufacturing & Construction",
-    year: "2015",
-    stage: "Seed",
-    origin: "Thailand",
-    website: "http://www.dragomo.com/",
-    logo: "https://drive.google.com/uc?id=1q3QYwevwkEk9sq9WTlf3VwjsUUvq8P5b",
-  },
-  {
-    id: 2,
-    name: "Dream Spoon's ice cream",
-    about: "The best 'guilt-free ice cream' with premium deliciousness",
-    industry: "Food & Agriculture",
-    year: "2020",
-    stage: "Transformed SME",
-    origin: "Thailand",
-    website: "https://dreamspoonsicecream.com/",
-    logo: "https://lh3.googleusercontent.com/u/0/d/1Qhht4i0sKwvxbjG1bifMveJU2fmbC1Cc=w1920-h969-iv1",
-  },
-  {
-    id: 3,
-    name: "DriveMate",
-    about:
-      "Drivemate, car rental between individuals and pros insured by LMG Switch your car with your passion",
-    industry: "Hospitality & Tourism",
-    year: "2017",
-    stage: "Funded",
-    origin: "Thailand",
-    website: "https://www.drivemate.asia/en",
-    logo: "https://lh3.googleusercontent.com/u/0/d/1prKoGWKstSvnQHG16dCyes36cR85OsZc=w1920-h969-iv1",
-  },
-];
+import { MongoClient } from "mongodb";
 
 export default function Home(props) {
   let data = props.data;
@@ -75,9 +38,24 @@ export default function Home(props) {
 }
 
 export async function getServerSideProps(context) {
+  const client = new MongoClient(process.env.MONGODB_URI);
+  let data = [];
+
+  try {
+    const database = client.db("startup_directory");
+    const startup = database.collection("startup");
+
+    const cursor = startup.find({});
+    data = await cursor.toArray();
+  } catch (error) {
+    console.log(error);
+  } finally {
+    await client.close();
+  }
+
   return {
     props: {
-      data: data,
+      data: JSON.parse(JSON.stringify(data)),
     },
   };
 }
