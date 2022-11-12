@@ -51,17 +51,20 @@ export default function Home(props) {
     <div>
       <h1 className="pt-10 text-3xl text-center">Main Page</h1>
       <div className="flex justify-center">
-        <div className="mt-10 flex justify-between items-center w-3/4">
-          <div>
-            <SearchBar></SearchBar>
-            <div className="flex justify-center mt-4 gap-4">
-              <button className="btn btn-sm btn-secondary">Voice</button>
-              <button className="btn btn-sm btn-secondary">Image</button>
-            </div>
-          </div>
+        <div className="mt-10 flex gap-4 items-center w-3/4">
+          <SearchBar></SearchBar>
+
+          <button className="btn btn-sm btn-secondary">Voice</button>
+          <button className="btn btn-sm btn-secondary">Image</button>
+        </div>
+      </div>
+      <div className="flex justify-center">
+        <div className="mt-4 flex gap-4 items-center w-3/4">
           <Chip name="Manufacturing & Construction"></Chip>
           <Chip name="Food & Agriculture"></Chip>
           <Chip name="Hospitality & Tourism"></Chip>
+          <Chip name="..."></Chip>
+          <Chip name="..."></Chip>
         </div>
       </div>
       <div className="mt-4">
