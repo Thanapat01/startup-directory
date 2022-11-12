@@ -45,7 +45,7 @@ export default function ForumItem(props) {
               <div className="flex items-center">
                 <div className="font-bold">{data.name}</div>
                 <div
-                  className="badge badge-secondary text-sm ml-4 hover:bg-secondary-focus"
+                  className="badge badge-primary text-sm ml-4 hover:bg-primary-focus"
                   onClick={tagHandler}
                 >
                   {data.tag}
