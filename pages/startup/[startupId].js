@@ -43,9 +43,9 @@ export default function StartupDetail(props) {
 
   return (
     <div className="pt-16 text-l flex justify-center">
-      <div className="grid grid-cols-4 gap-8 bg-primary-content p-8 w-3/4 rounded-md">
+      <div className="grid grid-cols-4 gap-8 p-8 w-3/4 rounded-md border-2 border-slate-900/10">
         <div className="avatar row-span-2 flex justify-center">
-          <div className="w-48 rounded ring-4 relative">
+          <div className="w-48 rounded ring-2 ring-slate-900/10 relative">
             <Image src={data.logo} layout="fill" objectFit="contain"></Image>
           </div>
         </div>

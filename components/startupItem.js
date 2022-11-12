@@ -18,7 +18,7 @@ export default function StartupItem(props) {
         <td className="bg-base-100 border-b border-slate-900/10 rounded-none">
           <div className="flex items-center space-x-3">
             <div className="avatar">
-              <div className="w-12 h-12 ring rounded">
+              <div className="w-12 h-12 ring-1 ring-slate-900/10 rounded relative">
                 <Image
                   src={data.logo}
                   layout="fill"
