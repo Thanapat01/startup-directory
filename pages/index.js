@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import Chip from "../components/chip";
+import Modal from "../components/modal";
 import SearchBar from "../components/searchBar";
 import Table from "../components/table";
 import styles from "../styles/Home.module.css";
@@ -53,9 +54,8 @@ export default function Home(props) {
       <div className="flex justify-center">
         <div className="mt-10 flex gap-4 items-center w-3/4">
           <SearchBar></SearchBar>
-
-          <button className="btn btn-sm btn-secondary">Voice</button>
-          <button className="btn btn-sm btn-secondary">Image</button>
+          <Modal name="Voice"></Modal>
+          <Modal name="Image"></Modal>
         </div>
       </div>
       <div className="flex justify-center">
