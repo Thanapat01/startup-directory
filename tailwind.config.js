@@ -12,7 +12,7 @@ module.exports = {
     themes: [
       {
         mytheme: {
-          primary: "#0096FF",
+          primary: "#69D0FF",
 
           secondary: "#00D7FF",
 

@@ -23,7 +23,7 @@ export default function Navbar() {
       <Link href="/register">
         <div className="flex-none">
           {/* <a className="btn bg-blue-400 hover:bg-blue-500 border-0 normal-case text-xl" href="/login">Login</a> */}
-          <a className="ml-2 btn btn-secondary normal-case text-xl">Register</a>
+          <a className="ml-2 btn btn-primary normal-case text-xl">Register</a>
         </div>
       </Link>
     </div>

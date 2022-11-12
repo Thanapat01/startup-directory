@@ -27,7 +27,7 @@ export default function login() {
           <div className="mr-2">Not a member yet?</div>
 
           <Link href="/register">
-            <a className="link link-hover text-primary">Register</a>
+            <a className="link link-hover text-sky-400 font-medium">Register</a>
           </Link>
         </div>
       </div>

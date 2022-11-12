@@ -1,7 +1,7 @@
 export default function Modal(props) {
   return (
     <div>
-      <label htmlFor={props.name} className="btn btn-sm btn-secondary">
+      <label htmlFor={props.name} className="btn btn-sm btn-primary">
         {props.name}
       </label>
 

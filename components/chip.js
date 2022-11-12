@@ -11,8 +11,8 @@ export default function Chip(props) {
     <button
       className={
         active
-          ? "btn btn-sm btn-secondary rounded-full hover:bg-secondary"
-          : "btn btn-sm btn-secondary bg-secondary/30 rounded-full hover:bg-secondary/30"
+          ? "btn btn-sm btn-primary rounded-full hover:bg-primary"
+          : "btn btn-sm btn-primary bg-primary/30 rounded-full hover:bg-primary/30"
       }
       onClick={onClickHandler}
     >
