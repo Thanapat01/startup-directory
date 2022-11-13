@@ -14,7 +14,7 @@ export default function StartupItem(props) {
 
   return (
     <tbody key={data.id}>
-      <tr>
+      <tr className="hover cursor-pointer" onClick={showDetailHandler}>
         <td className="bg-base-100 border-b border-slate-900/10 rounded-none">
           <div className="flex items-center space-x-3">
             <div className="avatar">
