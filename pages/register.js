@@ -9,7 +9,7 @@ export default function login() {
         <input
           type="text"
           placeholder="ID"
-          className="input input-bordered w-full max-w-xs "
+          className="input input-bordered w-full max-w-xs focus:outline-none "
         />
         <label className="label">
           <span className="label-text">Password</span>
@@ -17,7 +17,7 @@ export default function login() {
         <input
           type="text"
           placeholder="Password"
-          className="input input-bordered w-full max-w-xs"
+          className="input input-bordered w-full max-w-xs focus:outline-none"
         />
 
         <label className="label">
@@ -26,7 +26,7 @@ export default function login() {
         <input
           type="text"
           placeholder="Password"
-          className="input input-bordered w-full max-w-xs"
+          className="input input-bordered w-full max-w-xs focus:outline-none"
         />
 
         <button className="btn btn-primary border-0 normal-case text-xl text-neutral mt-4">
