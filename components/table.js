@@ -12,7 +12,7 @@ export default function Table(props) {
             <th className="bg-primary">Name</th>
             <th className="bg-primary">Industry</th>
             <th className="bg-primary">Stage</th>
-            <th className="bg-primary"></th>
+            {/* <th className="bg-primary"></th> */}
           </tr>
         </thead>
 

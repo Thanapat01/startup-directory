@@ -40,14 +40,14 @@ export default function StartupItem(props) {
         <td className="bg-base-100 border-b border-slate-900/10 rounded-none">
           {data.stage}
         </td>
-        <th className="bg-base-100 border-b border-slate-900/10 rounded-none">
+        {/* <th className="bg-base-100 border-b border-slate-900/10 rounded-none">
           <button
             className="btn btn-primary btn-xs text-neutral"
             onClick={showDetailHandler}
           >
             details
           </button>
-        </th>
+        </th> */}
       </tr>
     </tbody>
   );
