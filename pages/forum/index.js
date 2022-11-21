@@ -5,13 +5,13 @@ import Link from "next/link";
 let data = [
   {
     id: 1,
-    title: "Technology",
+    name: "Technology",
     tag: "#data",
     time: "2022-11-03",
   },
   {
     id: 2,
-    title: "Food",
+    name: "Food",
     tag: "#food",
     time: "2022-11-05",
   },

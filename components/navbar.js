@@ -7,6 +7,7 @@ export default function Navbar() {
         <Link href="/">
           <a className="btn btn-ghost normal-case text-xl ">Main</a>
         </Link>
+
         <Link href="/../forum">
           <a className="btn btn-ghost normal-case text-xl">Forum</a>
         </Link>
