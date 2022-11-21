@@ -16,15 +16,6 @@ export default function ForumItem(props) {
   }
 
   function getDateTime(event) {
-    // event.stopPropagation();
-    // const currentDate = new Date();
-    // let postDate = new Date(data.time);
-    // console.log(currentDate.getTime() - postDate.getTime());
-
-    // const currentDate = new Date();
-    // let postDate = new Date(data.time);
-    // return postDate;
-
     const date = new Date(data.time);
     const result = date.toLocaleString("en-UK", {
       dateStyle: "long",
@@ -51,9 +42,7 @@ export default function ForumItem(props) {
                   {data.tag}
                 </div>
               </div>
-              {/* <button className="btn" onClick={getDateTime}>
-                Click
-              </button> */}
+
               <div className="text-sm max-w-lg break-normal whitespace-normal ">
                 {data.datetime}
               </div>

@@ -50,32 +50,46 @@ export default function StartupDetail(props) {
           </div>
         </div>
         <div className="flex items-center">
-          <div className="badge badge-primary text-neutral font-semibold">Name</div>
+          <div className="badge badge-primary text-neutral font-semibold">
+            Name
+          </div>
           <div className="ml-4">{data.name}</div>
         </div>
         <div className="flex items-center">
-          <div className="badge badge-primary text-neutral font-semibold">Industry</div>
+          <div className="badge badge-primary text-neutral font-semibold">
+            Industry
+          </div>
           <div className="ml-4">{data.industry}</div>
         </div>
         <div className="flex items-center">
-          <div className="badge badge-primary text-neutral font-semibold">Year</div>
+          <div className="badge badge-primary text-neutral font-semibold">
+            Year
+          </div>
           <div className="ml-4">{data.year}</div>
         </div>
         <div className="flex items-center">
-          <div className="badge badge-primary text-neutral font-semibold">Status</div>
+          <div className="badge badge-primary text-neutral font-semibold">
+            Status
+          </div>
           <div className="ml-4">{data.stage}</div>
         </div>
         <div className="col-span-2 flex items-center">
-          <div className="badge badge-primary text-neutral font-semibold">Origin</div>
+          <div className="badge badge-primary text-neutral font-semibold">
+            Origin
+          </div>
           <div className="ml-4">{data.origin}</div>
         </div>
 
         <div className="col-span-4 ml-16">
-          <div className="badge badge-primary text-neutral font-semibold">Description</div>
+          <div className="badge badge-primary text-neutral font-semibold">
+            Description
+          </div>
           <div className="ml-8 indent-8">{data.about}</div>
         </div>
         <div className="col-start-4 flex justify-end items-center">
-          <div className="badge badge-primary text-neutral font-semibold">Website</div>
+          <div className="badge badge-primary text-neutral font-semibold">
+            Website
+          </div>
           <div>
             <a
               className="ml-2 link link-hover"

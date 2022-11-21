@@ -7,11 +7,13 @@ export default function Navbar() {
         <Link href="/">
           <a className="btn btn-ghost normal-case text-xl ">Main</a>
         </Link>
-        <Link href="/forum">
+
+        <Link href="/../forum">
           <a className="btn btn-ghost normal-case text-xl">Forum</a>
         </Link>
         <a className="btn btn-ghost normal-case text-xl">...</a>
       </div>
+
       <Link href="/login">
         <div className="flex-none">
           {/* <a className="btn bg-blue-400 hover:bg-blue-500 border-0 normal-case text-xl" href="/login">Login</a> */}
